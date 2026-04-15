@@ -23,11 +23,11 @@ const createAndSavePerson = (done) => {
     age:24,
     favoriteFoods:["mangwinya","skopo","Buns"]
   })
-  someone.document.save((err,data)=>{
-    if(err){
+  someone.save(function(err,data){
+    if (err){
       console.error(err)
     }
-    done(null , data);
+     done(null, data);  
   })
   
 }

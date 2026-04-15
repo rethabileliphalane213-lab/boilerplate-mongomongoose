@@ -1,11 +1,14 @@
-require('dotenv').config();
+require('dotenv').config({ path: './secret.env' });
+console.log("MONGO_URI:", process.env.MONGO_URI);;
+const mongoose=require("mongoose")
 
+mongoose.connect(process.env.MONGO_URI ,{ useNewUrlParser: true, useUnifiedTopology: true });
 
 let Person;
 
 const createAndSavePerson = (done) => {
   done(null /*, data*/);
-};
+}
 
 const createManyPeople = (arrayOfPeople, done) => {
   done(null /*, data*/);

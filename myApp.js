@@ -25,7 +25,7 @@ const createAndSavePerson = (done) => {
   })
   someone.save(function(err,data){
     if (err){
-      console.error(err)
+      console.log(err)
     }
      done(null, data);  
   })
